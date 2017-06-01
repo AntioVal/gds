@@ -1,0 +1,6 @@
+*Cambiar logos del proyecto directamente del proyecto java para que se empaquete por completo 
+ y se deploye correctamente.
+
+*Crear los usuarios necesarios con el departamento de SISTEMAS u OPERACION, esto para que les 
+ lleguen los correos de notificación a la hora de cargar un lote de movimientos en el sistema 
+ por parte del cliente.

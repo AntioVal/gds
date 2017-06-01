@@ -1,0 +1,13 @@
+﻿SELECT lote.clave_contrato, lote.fecha_usuario_autoriza,lote.fecha_liquidacion,movimiento.clave_empleado, 
+movimiento.nombre_empleado, movimiento.apellidoP_empleado, movimiento.apellidoM_empleado, movimiento.curp, movimiento.rfc, movimiento.cuenta_deposito, 
+movimiento.fecha_ingreso, movimiento.depto_empleado, movimiento.puesto_empleado, movimiento.tipo_movimiento, 
+movimiento.importe_liquidacion, movimiento.importe_liquidacion_mxp 
+from movimientos_h lote, movimientos movimiento 
+WHERE  lote.status = 'T' 
+AND lote.fecha_liquidacion=movimiento.fecha_liquidacion 
+and lote.clave_contrato = movimiento.clave_contrato 
+and lote.nombre_archivo= movimiento.nombre_archivo 
+AND lote.fecha_usuario_autoriza IS NOT NULL 
+and lote.fecha_usuario_autoriza>='2016-05-01 00:00:00.000' 
+and lote.fecha_usuario_autoriza<='2016-05-31 23:59:59.999' 
+ORDER BY lote.clave_contrato,lote.fecha_usuario_autoriza,lote.fecha_liquidacion ASC;
